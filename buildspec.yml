@@ -3,17 +3,19 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing dependencies (none required)."
+      - echo "Starting the build process..."
 
   pre_build:
     commands:
-      - echo "Pre-build: Validating environment."
-      - aws --version
+      - echo "Running pre-build tasks..."
 
   build:
     commands:
-      - echo "Build: No build steps required for static files."
+      - echo "Copying index.html to build directory"
+      - mkdir -p build
+      - cp index.html build/
+      - echo "Build complete."
 
   post_build:
     commands:
-      - echo "Post-build: Nothing to deploy, as no artifacts are used."
+      - echo "Post-build tasks can be added here, if needed."
