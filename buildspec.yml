@@ -8,7 +8,6 @@ phases:
   pre_build:
     commands:
       - echo "Pre-build phase: Checking repository files"
-      - ls -al  # List files for debugging (optional)
 
   build:
     commands:
