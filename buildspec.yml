@@ -17,4 +17,4 @@ phases:
   post_build:
     commands:
       - echo "Post-build phase: Deploying index.html to S3"
-      - aws s3 cp index.html s3://your-s3-bucket-name/index.html --acl public-read
+      - aws s3 cp index.html s3://index-portfolio/index.html --acl public-read
