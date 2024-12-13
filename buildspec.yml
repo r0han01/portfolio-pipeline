@@ -1,24 +1,20 @@
+---
 version: 0.2
-
 phases:
   install:
     commands:
       - echo "Install phase: No dependencies to install."
-
   pre_build:
     commands:
       - echo "Pre-build phase: Checking prerequisites."
-      - aws --version  # Confirm AWS CLI availability.
-
+      - aws --version
   build:
     commands:
       - echo "Build phase: Preparing files for deployment."
-
   post_build:
     commands:
       - echo "Post-build phase: Deploying files to S3."
       - aws s3 cp index.html s3://index-portfolio/index.html --acl public-read
-
 env:
   variables:
-    S3_BUCKET: "index-portfolio"
+    S3_BUCKET: index-portfolio
