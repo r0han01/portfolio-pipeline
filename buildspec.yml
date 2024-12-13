@@ -3,18 +3,14 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Install phase: No dependencies to install."
+      - echo "Installing dependencies (none required)."
   pre_build:
     commands:
-      - echo "Pre-build phase: Checking prerequisites."
+      - echo "Pre-build: Validating environment."
       - aws --version
   build:
     commands:
-      - echo "Build phase: Preparing files for deployment."
+      - echo "Build: No build steps required for static files."
   post_build:
     commands:
-      - echo "Post-build phase: Deploying files to S3."
-      - aws s3 cp index.html s3://index-portfolio/index.html --acl public-read
-env:
-  variables:
-    S3_BUCKET: index-portfolio
+      - echo "Post-build: Nothing to deploy, as no artifacts are used."
