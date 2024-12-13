@@ -1,4 +1,3 @@
----
 version: 0.2
 phases:
   install:
@@ -13,4 +12,4 @@ phases:
       - echo "Build: No build steps required for static files."
   post_build:
     commands:
-      - echo "Post-build: Nothing to deploy, as no artifacts are used."
+      - echo "Post-build: 'Nothing to deploy, as no artifacts are used."'
